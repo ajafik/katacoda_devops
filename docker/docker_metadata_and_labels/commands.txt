@@ -1,0 +1,22 @@
+docker run -l user=12345 -d redis : Cotainer labelled with user id 
+
+echo 'user=123461' >> labels && echo 'role=cache' >> labels
+
+docker run --label-file=labels -d redis
+
+LABEL vendor=Katacoda \ com.katacoda.version=0.0.5 \ com.katacoda.build-date=2016-07-01T10:47:29Z \ com.katacoda.course=Docker
+
+docker inspect
+
+docker inspect -f "{{json .Config.Labels }}" rd
+
+docker inspect -f "{{json .ContainerConfig.Labels }}" katacoda-label-example
+
+docker ps --filter "label=user=scrapbook"
+
+docker images --filter "label=vendor=Katacoda"
+
+docker -d \
+-H unix:///var/run/docker.sock \
+--label com.katacoda.environment="production" \
+--label com.katacoda.storage="ssd"
