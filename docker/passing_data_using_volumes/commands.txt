@@ -1,0 +1,11 @@
+docker run  -v /docker/redis-data:/data  --name r1 -d redis redis-server --appendonly yes
+
+cat data | docker exec -i r1 redis-cli --pipe
+
+ls /docker/redis-data
+
+docker run  -v /docker/redis-data:/backup ubuntu ls /backup
+
+docker run --volumes-from r1 -it ubuntu ls /data
+
+docker run -v /docker/redis-data:/data:ro -it ubuntu rm -rf /data
