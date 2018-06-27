@@ -1,0 +1,10 @@
+docker run -d --name redis-syslog --log-driver=syslog redis
+
+docker run -d --name redis-none --log-driver=none redis
+
+docker inspect --format '{{ .HostConfig.LogConfig }}' redis-server
+
+docker inspect --format '{{ .HostConfig.LogConfig }}' redis-syslog
+
+docker inspect --format '{{ .HostConfig.LogConfig }}' redis-none
+
