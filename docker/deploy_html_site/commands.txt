@@ -1,0 +1,4 @@
+docker build -t webserver-image:v1 .   : creates a docker image with tag/alias webserver-image:v1 from the Dockerfile
+
+docker run -d -p 80:80 webserver-image:v1  : Starts a container from the image created with port binded to 80 on host and the container.
+
