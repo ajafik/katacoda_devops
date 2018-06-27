@@ -1,0 +1,8 @@
+Use the command below to launch nginx-proxy
+
+docker run -d -p 80:80 -e DEFAULT_HOST=proxy.example -v /var/run/docker.sock:/tmp/docker.sock:ro --name nginx jwilder/nginx-proxy
+
+
+docker run -d -p 80 -e VIRTUAL_HOST=proxy.example katacoda/docker-http-server
+
+
