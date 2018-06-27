@@ -1,0 +1,23 @@
+docker search redis : Searches the docker registry for a Docker base image called redis
+
+docker run -d redis:3.2 : Start a container with base image redis of version 3.2
+
+docker ps : List all the running containers
+
+docker inspect <friendly_name|container_id> : Provides more details about a running container
+
+docker logs <friendly_name|container_id> : Displays the name the container has displayed to standard output.
+
+docker run -d --name RedisHostDB -p 6379:6379 redis:latest : This starts a docker container in the background/detached mode, with friendlyname RedisHostDB with binding ports 6379 as both internal and external ports of the container with the latest REDIS base image.
+
+
+docker run -d --name redisDynamic -p 6379 redis:latest  : Binding to internal port only, then random port selection for the external port per conatainer spinned.
+
+docker port redisDynamic 6379 : This displays the external port assigned as a result of the command above.
+
+docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis  : Persisting data between host and container. The data is saved on the host at /opt/docker/data/redis and mapped to /data in the container
+
+docker run ubuntu ps : Runs an Ubuntu container and shows the processes running in the container
+
+docker run -it unbuntu bash : Runs Ubuntu container and access bash shell in the container.
+
