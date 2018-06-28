@@ -1,0 +1,29 @@
+docker swarm --help
+
+ docker swarm join --token SWMTKN-1-407mnfvoeppyjpohh9qy0r94yl2wz5hmi315c2f2vh1rkjma4q-5wbc0wmh26maz14vdetgccotk 172.17.0.76:2377
+
+ kcuvie6ieaemxqbhxnmyndz9r
+
+ token=$(docker -H 172.17.0.76:2345 swarm join-token -q worker) && echo $token
+
+ docker swarm join 172.17.0.76:2377 --token $token
+
+ docker node ls
+
+ docker network create -d overlay skynet
+
+ docker service create --name http --network skynet --replicas 2 -p 80:80 katacoda/docker-http-server
+
+ docker service ls
+
+ docker service ps http
+
+ docker service inspect --pretty http
+
+ docker node ps self
+
+ docker node ps $(docker node ls -q | head -n1)
+
+ docker service scale http=5
+
+ 
