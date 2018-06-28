@@ -1,0 +1,3 @@
+docker stats <container_name>
+
+docker ps -q | xargs docker stats
