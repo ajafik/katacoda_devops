@@ -1,0 +1,9 @@
+git clone https://github.com/katacoda/golang-http-server.git
+
+docker build -f Dockerfile.multi -t golang-app .
+
+docker images
+
+docker run -d -p 80:80 golang-app
+
+curl localhost
