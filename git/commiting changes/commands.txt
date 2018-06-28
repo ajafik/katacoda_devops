@@ -1,0 +1,20 @@
+git status 
+
+git diff 
+
+git diff <commit_hash>
+
+git diff committed.js
+
+git add committed.js
+
+git diff --staged
+
+git log
+
+git log --pretty=format:"%h %an %ar - %s"
+
+git log --help
+
+git show <commit-hash>
+
