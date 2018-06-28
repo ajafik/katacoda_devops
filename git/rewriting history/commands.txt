@@ -1,0 +1,12 @@
+git rebase --interactive --root
+
+git log --oneline
+
+git commit --amend
+
+git rebase --interactive HEAD~8
+
+git log --oneline
+
+git rebase --interactive HEAD~2
+
