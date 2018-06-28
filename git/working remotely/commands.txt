@@ -1,0 +1,15 @@
+git remote add <friendly_name> /s/remote-project/1
+
+git push <friendly_name> <branch_name>
+
+git pull <friendly_name> <branch_name>
+
+git log
+
+git show
+
+git log --grep="#1234"
+
+git fetch
+
+git checkout remotes/origin/master
