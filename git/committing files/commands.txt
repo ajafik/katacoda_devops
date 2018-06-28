@@ -1,0 +1,7 @@
+git init
+
+git status 
+
+git add <file|directory>
+
+git commit -m "<commit message>"
