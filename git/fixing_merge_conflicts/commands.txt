@@ -1,0 +1,17 @@
+git merge remotes/origin/master
+
+git mergetool
+
+git checkout --theirs staging.txt
+
+git commit --no-edit
+
+git reset --HARD head;
+
+git pull --no-edit origin master
+
+git log --all --decorate --oneline
+
+git rebase
+
+git pull --rebase
