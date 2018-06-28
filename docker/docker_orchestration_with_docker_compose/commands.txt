@@ -1,0 +1,17 @@
+docker-compose up -d
+
+docker-compose ps
+
+docker-compose logs
+
+docker-compose
+
+
+docker-compose scale web=3         : scaling web containers up to 3
+
+docker-compose scale web=1        : scaling down web containers to 1
+
+docker-compose stop
+
+docker-compose rm
+
