@@ -1,0 +1,18 @@
+git diff HEAD~2 HEAD
+
+git log --oneline
+
+git log -p
+
+git log -p -n 2
+
+git log --grep="Initial"
+
+git bisect start
+
+git bisect bad
+
+git bisect good HEAD~5
+
+git blame 
+
