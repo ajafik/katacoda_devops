@@ -1,1 +1,1 @@
-# Katacoda DevOps
+# Katacoda DevOps (Notes)
