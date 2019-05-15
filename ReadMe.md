@@ -1,1 +1,5 @@
-# Katacoda DevOps (Notes)
+# Katacoda DevOps 
+
+## Notes on:
+> Docker
+> Git
